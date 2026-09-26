@@ -127,7 +127,7 @@ export const projects: Project[] = [
     dates: '2024',
     note: 'Congressional App Challenge nominee',
     summary: [
-      'iOS student mental-health app, 3,000+ downloads.',
+      'Student mental-health support app built for iOS.',
     ],
     tags: ['Swift', 'Ruby', 'Firebase'],
     links: [
