@@ -52,7 +52,7 @@ export const experience: Entry[] = [
     dates: 'Summer 2025',
     location: 'Round Rock, TX',
     summary: [
-      'Built a speech-translation robot converting live audio to hardware instructions with Whisper and G-Code, and a real-time C++/MQTT diagnostics dashboard that streamlined embedded debugging by 50%.',
+      'Built AI debugging tools for server validation, turning raw test telemetry & logs into clustered faults & suggested fixes.',
     ],
     tags: ['C++', 'MQTT', 'Whisper', 'NLP', 'G-Code'],
     links: [],
