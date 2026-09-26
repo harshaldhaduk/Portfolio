@@ -3,10 +3,10 @@ import type { Project } from '../types'
 /**
  * Six-to-eight-word descriptions, by the owner's instruction.
  *
- * Each line keeps one figure taken verbatim from the résumé; nothing is
- * invented, and where a project had three bullets the strongest metric was
- * selected rather than paraphrased into something new. The `detail` expanders
- * and the résumé PDF still carry the full versions.
+ * Each line keeps one figure taken from the résumé or owner-provided copy;
+ * nothing is invented, and where a project had three bullets the strongest
+ * metric was selected rather than paraphrased into something new. The
+ * `detail` expanders and the résumé PDF still carry the full versions.
  *
  * Lattice's line deliberately avoids the phrase "multi-modal AI overlap" from
  * the résumé. In context — an extension stopping several AI agents colliding on
@@ -32,6 +32,25 @@ export const projects: Project[] = [
     // legible. Overwatch has no public brand, so this mark stands in for one,
     // and deliberately carries no employer or product-line name.
     image: '/shots/overwatch.jpg',
+  },
+  {
+    id: 'pintos',
+    org: 'Pintos',
+    title: 'Kernel & Unix shell',
+    dates: '2026',
+    summary: [
+      'Prevented races and deadlocks across 8 concurrent threads.',
+    ],
+    tags: ['C', 'x86', 'Linux', 'QEMU', 'GDB'],
+    links: [
+      {
+        label: 'GitLab',
+        href: 'https://gitlab-fall26.cs.utexas.edu/harshald/pintos',
+      },
+    ],
+    image: '/shots/pintos.png',
+    detail:
+      'Extended Pintos in C with a thread scheduler, locks, and semaphores, preventing race conditions and deadlocks across 8 concurrent threads. Added nested priority donation to solve priority inversion, ensuring high-priority threads never stall behind low-priority lock holders. Also implemented a Linux shell in C with job control, foreground and background processes, and signal handling for system calls.',
   },
   {
     id: 'clarity',

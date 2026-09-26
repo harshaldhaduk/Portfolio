@@ -14,7 +14,7 @@ vi.stubGlobal(
 )
 
 describe('Projects', () => {
-  it('renders all five projects', () => {
+  it('renders all projects', () => {
     render(<Projects />)
     for (const project of projects) {
       expect(screen.getByText(project.org)).toBeInTheDocument()
@@ -45,10 +45,19 @@ describe('Projects', () => {
     expect(container.textContent).not.toMatch(/★|\bstars?\b/i)
   })
 
-  it('renders the exact repo href for each linked project', () => {
+  it('renders the exact source href for each linked project', () => {
+    const pintos = projects.find((p) => p.id === 'pintos')!
     const lattice = projects.find((p) => p.id === 'lattice')!
     const calmcampus = projects.find((p) => p.id === 'calmcampus')!
     const echotrade = projects.find((p) => p.id === 'echotrade')!
+
+    const gitlab = render(<ProjectCard project={pintos} />)
+    expect(
+      within(gitlab.container).getByRole('link', { name: /gitlab/i }),
+    ).toHaveAttribute(
+      'href',
+      'https://gitlab-fall26.cs.utexas.edu/harshald/pintos',
+    )
 
     const a = render(<ProjectCard project={lattice} />)
     expect(

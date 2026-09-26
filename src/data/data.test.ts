@@ -21,10 +21,10 @@ describe('content data', () => {
   it('has the agreed number of entries in each section', () => {
     expect(experience).toHaveLength(6)
     expect(research).toHaveLength(1)
-    // 7, not the original 6: Linewatch was added on request. This number is
-    // pinned deliberately so the curated set cannot creep back toward the full
-    // résumé unnoticed — bump it only for a decision actually taken.
-    expect(projects).toHaveLength(7)
+    // 8, not the original 6: Linewatch and Pintos were added on request. This
+    // number is pinned deliberately so the curated set cannot creep back toward
+    // the full résumé unnoticed — bump it only for a decision actually taken.
+    expect(projects).toHaveLength(8)
     expect(skills.length).toBeGreaterThanOrEqual(3)
   })
 
@@ -68,6 +68,7 @@ describe('content data', () => {
       // of the whole account, so admitting it widens the allowlist by exactly
       // one destination and no more.
       /^https:\/\/github\.com\/bruhlol108\/Clarity$/,
+      /^https:\/\/gitlab-fall26\.cs\.utexas\.edu\/harshald\/pintos$/,
       /^https:\/\/devpost\.com\/software\/[a-z0-9-]+$/,
       /^https:\/\/www\.linkedin\.com\/in\/harshaldhaduk(\/|$)/,
       /^mailto:[^@\s]+@[^@\s]+$/,
