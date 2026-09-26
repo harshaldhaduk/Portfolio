@@ -1,12 +1,12 @@
 import type { Project } from '../types'
 
 /**
- * Six-to-eight-word descriptions, by the owner's instruction.
+ * Six-to-eight-word descriptions, by the owner's instruction. Each line says
+ * what the project is or does; metrics belong in the `detail` expander, where
+ * they have enough context to be meaningful.
  *
- * Each line keeps one figure taken from the résumé or owner-provided copy;
- * nothing is invented, and where a project had three bullets the strongest
- * metric was selected rather than paraphrased into something new. The
- * `detail` expanders and the résumé PDF still carry the full versions.
+ * Nothing is invented. The `detail` expanders and the résumé PDF carry the
+ * fuller implementation notes and outcomes.
  *
  * Lattice's line deliberately avoids the phrase "multi-modal AI overlap" from
  * the résumé. In context — an extension stopping several AI agents colliding on
@@ -22,7 +22,7 @@ export const projects: Project[] = [
     title: 'Internal platform',
     dates: '2026',
     summary: [
-      'Cut page load ~15s → ~1s across ~60K entities.',
+      'Internal dealer-network management and search platform.',
     ],
     tags: ['.NET 8', 'Stencil.js', 'Oracle', 'Redis', 'TypeScript'],
     links: [],
@@ -32,6 +32,8 @@ export const projects: Project[] = [
     // legible. Overwatch has no public brand, so this mark stands in for one,
     // and deliberately carries no employer or product-line name.
     image: '/shots/overwatch.jpg',
+    detail:
+      'An internal dealer-data platform for searching names, IDs, and addresses across roughly 60,000 entities. Page-load time was reduced from approximately 15 seconds to approximately 1 second.',
   },
   {
     id: 'pintos',
@@ -39,7 +41,7 @@ export const projects: Project[] = [
     title: 'Kernel & Unix shell',
     dates: '2026',
     summary: [
-      'Prevented races and deadlocks across 8 concurrent threads.',
+      'Teaching OS kernel and Unix shell implementation.',
     ],
     tags: ['C', 'x86', 'Linux', 'QEMU', 'GDB'],
     links: [
@@ -108,7 +110,7 @@ export const projects: Project[] = [
     title: 'Codebase analysis tool',
     dates: '2025',
     summary: [
-      'Cut new-hire onboarding ~60% via AST parsing.',
+      'Interactive architecture maps generated from GitHub codebases.',
     ],
     tags: ['React', 'Tailwind', 'Node.js', 'Docker', 'Terraform'],
     links: [
